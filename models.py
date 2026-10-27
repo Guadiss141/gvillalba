@@ -10,3 +10,4 @@ class TaskModel(Base):
     title: Mapped[str] = mapped_column(String(100), index=True, nullable=False)
     description: Mapped[str | None] = mapped_column(String(255), nullable=True)
     completed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    archived: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)

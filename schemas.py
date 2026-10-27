@@ -11,6 +11,6 @@ class TaskCreate(TaskBase):
 
 class TaskResponse(TaskBase):
     id: int
+    archived: bool
 
-    # Configuración para permitir la lectura de modelos ORM directamente (equivalente a orm_mode en v1)
     model_config = ConfigDict(from_attributes=True)
